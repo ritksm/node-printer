@@ -4,7 +4,7 @@
 #include <nan.h>
 #include <node_version.h>
 
-#if NODE_VERSION_AT_LEAST(13, 0, 0)
+#if NODE_VERSION_AT_LEAST(12, 0, 0)
 #  define MY_NODE_GET_OBJECT(object, id) object->Get(v8::Isolate::GetCurrent()->GetCurrentContext(), id).ToLocalChecked()
 #  define MY_NODE_SET_OBJECT(object, id, prop) object->Set(v8::Isolate::GetCurrent()->GetCurrentContext(), id, prop)
 #  define MY_NODE_SET_OBJECT_PROP(object, id, prop) MY_NODE_SET_OBJECT(object, V8_STRING_NEW_UTF8(id), prop)
@@ -45,7 +45,7 @@
 #  define V8_STRING_NEW_UTF8(value)   Nan::Utf8String(value)
 #  define V8_STRING_NEW_2BYTES(value)   v8::String::New(value)
 
-#  define RETURN_EXCEPTION(msg) return v8::ThrowException(Nan::Error(msg)) 
+#  define RETURN_EXCEPTION(msg) return v8::ThrowException(Nan::Error(msg))
 
 #  define RETURN_EXCEPTION_STR(msg) RETURN_EXCEPTION(V8_STRING_NEW_UTF8(msg))
 #  define MY_NODE_MODULE_RETURN_VALUE(value)   return scope.Close(value)
@@ -84,7 +84,7 @@
 
 #define V8_STR_CONC(left, right)                              \
 	v8::String::Concat(V8_STRING_NEW_UTF8(left), V8_STRING_NEW_UTF8(right))
-		
+
 #define REQUIRE_ARGUMENTS(args, n)                                                   \
     if (args.Length() < (n)) {                                                 \
         RETURN_EXCEPTION_STR("Expected " #n " arguments");                       \

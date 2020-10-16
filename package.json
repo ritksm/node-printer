@@ -1,19 +1,15 @@
 {
-  "name": "printer",
+  "name": "@ritksm/printer",
   "description": "Node.js printer bindings",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "homepage": "http://github.com/tojocky/node-printer",
-  "author": {
-    "name": "Ion Lupascu",
-    "url": "http://program-support.co.uk/",
-    "email": "ionlupascu@gmail.com"
-  },
+  "author": "Ion Lupascu <ionlupascu@gmail.com> (http://program-support.co.uk/)",
   "contributors": [
     "Name Lastname <email@server.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tojocky/node-printer.git"
+    "url": "git+https://github.com/tojocky/node-printer.git"
   },
   "devDependencies": {
     "grunt": "^1.0.4",
@@ -50,5 +46,14 @@
     "nan": "^2.14.0",
     "node-gyp": "^6.0.1",
     "node-pre-gyp": "^0.14.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/tojocky/node-printer/issues"
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
+  },
+  "license": "ISC"
 }
